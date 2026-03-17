@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scholarship/Seminar Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        fieldset {
+            margin-bottom: 15px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Scholarship / Seminar Registration Form</h2>
+
+<form>
+
+    <!-- Personal Details -->
+    <fieldset>
+        <legend>Personal Details</legend>
+
+        <label>Full Name:
+            <input type="text" name="name" required>
+        </label>
+
+        <label>Email:
+            <input type="email" name="email" required>
+        </label>
+
+        <label>Phone Number:
+            <input type="tel" name="phone">
+        </label>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+    </fieldset>
+
+    <!-- Academic Details -->
+    <fieldset>
+        <legend>Academic Details</legend>
+
+        <label>College Name:
+            <input type="text" name="college">
+        </label>
+
+        <label>Course:
+            <input type="text" name="course">
+        </label>
+
+        <label>Year of Study:
+            <select name="year">
+                <option value="">--Select Year--</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select>
+        </label>
+    </fieldset>
+
+    <!-- Application Type -->
+    <fieldset>
+        <legend>Application Type</legend>
+
+        <input type="radio" name="apply" value="scholarship"> Scholarship <br>
+        <input type="radio" name="apply" value="seminar"> Seminar
+    </fieldset>
+
+    <!-- Seminar Topics -->
+    <fieldset>
+        <legend>Seminar Topics</legend>
+
+        <input type="checkbox" name="topic" value="ai"> Artificial Intelligence <br>
+        <input type="checkbox" name="topic" value="web"> Web Development <br>
+        <input type="checkbox" name="topic" value="data"> Data Science <br>
+        <input type="checkbox" name="topic" value="cyber"> Cyber Security
+    </fieldset>
+
+    <!-- Preferred Mode -->
+    <fieldset>
+        <legend>Preferred Mode</legend>
+
+        <label>Select Mode:
+            <select name="mode">
+                <option value="">--Select Mode--</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+            </select>
+        </label>
+    </fieldset>
+
+    <!-- Declaration -->
+    <fieldset>
+        <legend>Declaration</legend>
+
+        <input type="checkbox" required> I agree to the terms and conditions.
+    </fieldset>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>
