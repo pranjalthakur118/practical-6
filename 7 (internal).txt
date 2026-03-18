@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tribute Page</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f0f8ff;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .profile {
+            border: 2px solid #444;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 50%;
+            border: 3px solid #333;
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Biography</a>
+        <a href="#">Achievements</a>
+    </nav>
+
+    <div class="container">
+        <div class="profile">
+
+            <h1 style="text-align:center;">Dr. A.P.J. Abdul Kalam</h1>
+
+            <center>
+                <img src="kalam.jpg" alt="APJ Abdul Kalam">
+            </center>
+
+            <p>
+                Dr. A.P.J. Abdul Kalam was an Indian aerospace scientist and the 11th President of India.
+                He is known as the "Missile Man of India".
+            </p>
+
+            <p style="color: green; font-weight: bold;">
+                "Dream, dream, dream. Dreams transform into thoughts and thoughts result in action."
+            </p>
+
+        </div>
+    </div>
+
+</body>
+</html>
