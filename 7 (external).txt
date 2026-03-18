@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tribute Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Biography</a>
+        <a href="#">Achievements</a>
+    </nav>
+
+    <div class="container">
+        <div class="profile">
+
+            <h1>Dr. A.P.J. Abdul Kalam</h1>
+
+            <p>
+                He was a great scientist and leader who inspired millions of people.
+            </p>
+
+            <p style="color:red;">
+                This line uses inline CSS.
+            </p>
+
+        </div>
+    </div>
+
+</body>
+</html>
