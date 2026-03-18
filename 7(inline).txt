@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inline CSS Example</title>
+</head>
+<body style="background-color: lightblue; font-family: Arial;">
+
+    <!-- Navigation Bar -->
+    <div style="background-color: black; padding: 10px; text-align: center;">
+        <a href="#" style="color: white; margin: 10px; text-decoration: none;">Home</a>
+        <a href="#" style="color: white; margin: 10px; text-decoration: none;">Biography</a>
+        <a href="#" style="color: white; margin: 10px; text-decoration: none;">Achievements</a>
+    </div>
+
+    <!-- Profile Section -->
+    <div style="width: 80%; margin: auto; background-color: white; padding: 20px; border: 2px solid black; border-radius: 10px;">
+
+        <h1 style="text-align: center; color: darkblue;">
+            Dr. A.P.J. Abdul Kalam
+        </h1>
+
+        <p style="font-size: 18px; color: #333;">
+            Dr. A.P.J. Abdul Kalam was one of India's most respected scientists and the 11th President of India.
+        </p>
+
+        <p style="color: green; font-weight: bold; font-style: italic;">
+            "Dream, dream, dream. Dreams transform into thoughts and thoughts result in action."
+        </p>
+
+    </div>
+
+</body>
+</html>
