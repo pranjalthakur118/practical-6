@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Password Generator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 320px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+        text-align: center;
+    }
+    label {
+        display: block;
+        margin-top: 10px;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 10px;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    button:hover {
+        background: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Password Generator</h2>
+
+    <!-- Password Display -->
+    <input type="text" id="password"
+        pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}"
+        title="Must contain uppercase, lowercase, number, special character & 8+ length"
+        readonly>
+
+    <button onclick="copyPassword()">Copy</button>
+
+    <!-- Length Slider -->
+    <label>Password Length: <span id="lengthValue">8</span></label>
+    <input type="range" id="length" min="4" max="20" value="8">
+
+    <!-- Options -->
+    <label><input type="checkbox" id="uppercase" checked> Uppercase (A-Z)</label>
+    <label><input type="checkbox" id="lowercase" checked> Lowercase (a-z)</label>
+    <label><input type="checkbox" id="numbers" checked> Numbers (0-9)</label>
+    <label><input type="checkbox" id="symbols"> Symbols (@#$)</label>
+
+    <button onclick="generatePassword()">Generate Password</button>
+</div>
+
+<script>
+const lengthSlider = document.getElementById("length");
+const lengthValue = document.getElementById("lengthValue");
+
+lengthSlider.oninput = () => {
+    lengthValue.textContent = lengthSlider.value;
+};
+
+function generatePassword() {
+    let length = lengthSlider.value;
+    let chars = "";
+
+    if (document.getElementById("uppercase").checked)
+        chars += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    if (document.getElementById("lowercase").checked)
+        chars += "abcdefghijklmnopqrstuvwxyz";
+    if (document.getElementById("numbers").checked)
+        chars += "0123456789";
+    if (document.getElementById("symbols").checked)
+        chars += "@$!%*?&";
+
+    if (chars === "") {
+        alert("Select at least one option!");
+        return;
+    }
+
+    let password = "";
+    for (let i = 0; i < length; i++) {
+        password += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+
+    document.getElementById("password").value = password;
+}
+
+function copyPassword() {
+    let passField = document.getElementById("password");
+    passField.select();
+    document.execCommand("copy");
+    alert("Password copied!");
+}
+</script>
+
+</body>
+</html>
